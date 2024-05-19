@@ -9,17 +9,18 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @State private var temaMalam = false
+    
     var body: some View {
         ZStack{
-            warnaLatarTampilanCuaca(topColor: .blue, 
-                                    bottomColor: Color("lightBlue"))
+            warnaLatarTampilanCuaca(temaMalam: $temaMalam)
             
             VStack{ 
                 namaKotaUntukCuaca(namakota: "Surabaya, IND")
                 
-                cuacaHariIni(namaGambar: "cloud.sun.fill", 
+                cuacaHariIni(namaGambar: temaMalam ? "moon.stars.fill":"cloud.sun.fill",
                              temperatur: 80)
-                
+             
                 HStack(spacing:20){
                     kumpulanCuacaHarian(hari: "Senin",
                                   namaGambar: "cloud.sun.fill",
@@ -46,9 +47,9 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    print("Tapped")
+                    temaMalam.toggle()
                 } label: {
-                    tombol(namaTombol: "Ganti Hari", warnaLatarBelakang: .white, warnaTulisan: .blue)
+                    tombol(namaTombol: "Ganti Tema", warnaLatarBelakang: .white, warnaTulisan: .blue)
                 }
                 
                 Spacer()
@@ -87,12 +88,12 @@ struct kumpulanCuacaHarian: View {
 }
 
 struct warnaLatarTampilanCuaca: View {
-    var topColor: Color
-    var bottomColor: Color
+    
+    @Binding var temaMalam: Bool
     
     var body: some View {
         LinearGradient(
-            gradient: Gradient(colors: [topColor, bottomColor]),
+            gradient: Gradient(colors: [temaMalam ? .black : .blue, temaMalam ? .gray :Color("lightBlue")]) ,
             startPoint: .top,
             endPoint: .bottom)
         .edgesIgnoringSafeArea(.all)
@@ -131,13 +132,13 @@ struct cuacaHariIni:View {
 }
 
 struct tombol: View {
-    
+
     var namaTombol: String
     var warnaLatarBelakang: Color
     var warnaTulisan: Color
     
     var body: some View {
-        Text("Ganti Hari")
+        Text(namaTombol)
             .frame(width: 280, height: 50)
             .font(.system(size: 20, weight: .bold))
             .background(warnaLatarBelakang)
@@ -145,3 +146,4 @@ struct tombol: View {
             .cornerRadius(10)
     }
 }
+

@@ -12,6 +12,7 @@
 		F96E47BE2BF9A862000779BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E47BD2BF9A862000779BD /* Item.swift */; };
 		F96E47C02BF9A867000779BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96E47BF2BF9A867000779BD /* Assets.xcassets */; };
 		F96E47C32BF9A867000779BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96E47C22BF9A867000779BD /* Preview Assets.xcassets */; };
+		F96E47CB2BF9F520000779BD /* ListCuacaHarian.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E47CA2BF9F520000779BD /* ListCuacaHarian.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F96E47BD2BF9A862000779BD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F96E47BF2BF9A867000779BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F96E47C22BF9A867000779BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F96E47CA2BF9F520000779BD /* ListCuacaHarian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCuacaHarian.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,8 @@
 		F96E47B82BF9A862000779BD /* SwiftUi-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F96E47CD2BF9F5AE000779BD /* Model */,
+				F96E47CC2BF9F5A2000779BD /* View */,
 				F96E47B92BF9A862000779BD /* SwiftUi_WeatherApp.swift */,
 				F96E47BB2BF9A862000779BD /* ContentView.swift */,
 				F96E47BD2BF9A862000779BD /* Item.swift */,
@@ -68,6 +72,29 @@
 				F96E47C22BF9A867000779BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F96E47C92BF9F4E0000779BD /* Cuaca */ = {
+			isa = PBXGroup;
+			children = (
+				F96E47CA2BF9F520000779BD /* ListCuacaHarian.swift */,
+			);
+			path = Cuaca;
+			sourceTree = "<group>";
+		};
+		F96E47CC2BF9F5A2000779BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F96E47C92BF9F4E0000779BD /* Cuaca */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F96E47CD2BF9F5AE000779BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96E47CB2BF9F520000779BD /* ListCuacaHarian.swift in Sources */,
 				F96E47BC2BF9A862000779BD /* ContentView.swift in Sources */,
 				F96E47BE2BF9A862000779BD /* Item.swift in Sources */,
 				F96E47BA2BF9A862000779BD /* SwiftUi_WeatherApp.swift in Sources */,
