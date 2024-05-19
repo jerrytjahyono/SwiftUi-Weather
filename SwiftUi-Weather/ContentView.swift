@@ -14,7 +14,7 @@ struct ContentView: View {
             warnaLatarTampilanCuaca(topColor: .blue, 
                                     bottomColor: Color("lightBlue"))
             
-            VStack{
+            VStack{ 
                 namaKotaUntukCuaca(namakota: "Surabaya, IND")
                 
                 cuacaHariIni(namaGambar: "cloud.sun.fill", 
